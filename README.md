@@ -14,3 +14,10 @@ Run deploy of Repo on EC2 with terraform
 
 #### Idea: 
 ![image](https://github.com/user-attachments/assets/3b8f80e0-8cc8-4d2d-8d3e-3b05bab9dd2e)
+
+
+get kubeconfig
+aws eks update-kubeconfig --region us-east-1 --name poc-cluster
+
+set loadbalancer no jenkins
+kubectl patch svc jenkins -p '{"spec": {"type": "LoadBalancer"}}'
