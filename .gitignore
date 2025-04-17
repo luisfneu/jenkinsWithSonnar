@@ -35,3 +35,11 @@ override.tf.json
 # Ignore CLI configuration files
 .terraformrc
 terraform.rc
+.terraform/providers
+.terraform.lock.hcl
+kubeconfig_poc-cluster
+terraform.tfstate
+terraform.tfstate.backup
+.terraform/modules/my-cluster
+.terraform/modules/modules.json
+.terraform/modules
