@@ -1,8 +1,9 @@
 resource "helm_release" "jenkins" {
-  name       = "jenkins"
-  repository = "https://charts.jenkins.io"
-  chart      = "jenkins"
-
+  name             = "jenkins"
+  namespace        = "jenkins"
+  repository       = "https://charts.jenkins.io"
+  chart            = "jenkins"
+  create_namespace = true
   values = [
     "${file("jenkins-values.yaml")}"
   ]
