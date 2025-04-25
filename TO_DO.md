@@ -44,3 +44,32 @@
         - system:masters
         userarn: arn:aws:iam::443370700365:user/jeferson
         username: jeferson
+
+
+
+
+
+
+attach ROLE IAM ao green-eks-node-group-20250421205138504200000008
+e ao 
+blue-eks-node-group-20250421205139223500000009 
+AmazonEBSCSIDriverPolicy
+
+
+
+
+### ajustar storage
+instalar do helm 
+
+helm repo add aws-ebs-csi-driver https://kubernetes-sigs.github.io/aws-ebs-csi-driver
+helm repo update
+
+instalar
+
+helm upgrade --install aws-ebs-csi-driver \
+  aws-ebs-csi-driver/aws-ebs-csi-driver \
+  --namespace kube-system
+
+
+ver se roda
+kubectl get pods -n kube-system | grep ebs

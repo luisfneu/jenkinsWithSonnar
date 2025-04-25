@@ -104,3 +104,8 @@ variable "poc1_subnet_nic_private_ip" {
   type    = list(string)
   default = ["10.0.1.50"]
 }
+
+variable "node_group_names" {
+  type = set(string)
+  default = ["green-eks-node-group", "blue-eks-node-group"]
+}
