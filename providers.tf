@@ -1,7 +1,7 @@
 terraform {
   required_providers {
     aws = {
-      version = "5.0"
+      version = "5.95.0"
     }
     helm = {
       version = "2.17.0"
@@ -28,7 +28,6 @@ provider "kubernetes" {
     host                   = data.aws_eks_cluster.poc-cluster.endpoint
     cluster_ca_certificate = base64decode(data.aws_eks_cluster.poc-cluster.certificate_authority.0.data)
     token                  = data.aws_eks_cluster_auth.poc-cluster.token
-    #load_config_file       = false
 }
 
 provider "aws" {

@@ -28,3 +28,16 @@ resource "helm_release" "jenkins" {
   depends_on = [ helm_release.aws-ebs-csi-driver ]
 }
 
+resource "helm_release" "sonarqube" {
+  name       = "sonarqube"
+  repository = "https://SonarSource.github.io/helm-chart-sonarqube"
+  chart      = "sonarqube"
+  namespace  = "sonarqube"
+  version    = "2025.2.0"
+  create_namespace = true
+
+  values = [
+    "${file("sonarQ-values.yaml")}"
+  ]
+  depends_on = [ helm_release.aws-ebs-csi-driver, helm_release.jenkins ]
+}
