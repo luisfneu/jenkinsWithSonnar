@@ -5,6 +5,8 @@ resource "helm_release" "aws-ebs-csi-driver" {
   chart            = "aws-ebs-csi-driver"
   version          = "2.30.0"
   create_namespace = false
+
+    depends_on = [ module.my-cluster ]
 }
 resource "helm_release" "jenkins" {
   name             = "jenkins"

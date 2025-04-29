@@ -30,5 +30,6 @@ postgresql:
   postgresqlPassword: "sonarPass"
   postgresqlDatabase: "sonarDB"
 
-monitoringPasscodeSecretName: "sonar-monitoring-passcode"
-monitoringPasscodeSecretKey: "myStrongPasscode123"
+monitoringPasscode: "myStrongPasscode123"
+# monitoringPasscodeSecretName: "sonar-monitoring-passcode"
+# monitoringPasscodeSecretKey: "myStrongPasscode123"

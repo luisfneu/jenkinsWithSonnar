@@ -7,7 +7,7 @@ module "my-cluster" {
   subnet_ids      = [aws_subnet.poc1-subnet.id, aws_subnet.poc2-subnet.id]
   vpc_id          = aws_vpc.poc-vpc.id
   cluster_endpoint_public_access = true
-  # enable_cluster_creator_admin_permissions = true
+  enable_cluster_creator_admin_permissions = true
 
   eks_managed_node_group_defaults = {
     ami_type       = "AL2_x86_64"
