@@ -1,3 +1,4 @@
+
 resource "helm_release" "aws-ebs-csi-driver" {
   name             = "aws-ebs-csi-driver"
   namespace        = "kube-system"
@@ -8,6 +9,7 @@ resource "helm_release" "aws-ebs-csi-driver" {
 
     depends_on = [ module.my-cluster ]
 }
+
 resource "helm_release" "jenkins" {
   name             = "jenkins"
   namespace        = "jenkins"
