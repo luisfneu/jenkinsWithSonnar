@@ -1,6 +1,10 @@
 # TO DO
 # Ajustar permissoes para acessos via Kubectl para usuario nomeado
+<<<<<<< HEAD
 #####
+=======
+##### code
+>>>>>>> 440d73912167a19c2277c595c5042850f9c3d384
   kind: ConfigMap
   apiVersion: v1
   metadata:
@@ -47,17 +51,23 @@
 
 
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 440d73912167a19c2277c595c5042850f9c3d384
 attach ROLE IAM ao green-eks-node-group-20250421205138504200000008
 e ao 
 blue-eks-node-group-20250421205139223500000009 
 AmazonEBSCSIDriverPolicy
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 440d73912167a19c2277c595c5042850f9c3d384
 ### ajustar storage
 instalar do helm 
 
@@ -72,4 +82,8 @@ helm upgrade --install aws-ebs-csi-driver \
 
 
 ver se roda
+<<<<<<< HEAD
 kubectl get pods -n kube-system | grep ebs
+=======
+kubectl get pods -n kube-system | grep ebs
+>>>>>>> 440d73912167a19c2277c595c5042850f9c3d384
