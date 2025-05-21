@@ -407,13 +407,6 @@ controller:
     - workflow-aggregator:608.v67378e9d3db_1
     - git:5.7.0
     - configuration-as-code:1953.v148f87d74b_1e
-## custom plugins
-   # - maven-plugin:latest
-   # - pipeline-stage-view:latest
-   # - sonarqube:latest
-   # - sonar:latest
-   # - terraform:latest
-   # - aws-credentials:latest
 
   # If set to false, Jenkins will download the minimum required version of all dependencies.
   # -- Download the minimum required version or latest version of all dependencies
@@ -1263,6 +1256,7 @@ persistence:
   # If undefined (the default) or set to null, no storageClassName spec is
   #   set, choosing the default provisioner (gp2 on AWS, standard on GKE, AWS & OpenStack)
   # -- Storage class for the PVC
+
   storageClass: gp2-immediate
   # -- Annotations for the PVC
   annotations: {}
