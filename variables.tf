@@ -10,7 +10,6 @@ variable "jenkins_admin_password" {
   type        = string
   description = "Senha Admin padrao."
   default     = "admin"
-  default     = "admin"
 }
 
 # EKS Cluster Settings
@@ -36,7 +35,6 @@ variable "worker_group_name" {
 variable "worker_group_instance_type" {
   type        = list(string)
   description = "Tipo de instancia para subir os nós."
-  default     = ["t3.large"]
   default     = ["t3.large"]
 }
 
