@@ -2,11 +2,14 @@ terraform {
   required_providers {
     aws = {
       version = "5.95.0"
+      version = "5.95.0"
     }
     helm = {
       version = "2.17.0"
+      version = "2.17.0"
     }
     kubernetes = {
+      version = "2.36.0"
       version = "2.36.0"
     }
   }
@@ -31,6 +34,8 @@ provider "kubernetes" {
 }
 
 provider "aws" {
+  region  = var.aws_region
+  profile = "default"
   region  = var.aws_region
   profile = "default"
 }
